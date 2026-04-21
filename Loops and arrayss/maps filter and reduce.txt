@@ -1,0 +1,33 @@
+The "Power Tools": Map, 
+Now that you're comfortable adding and removing items, 
+let's look at the "Chapter 5" topics from your image. 
+These are methods used to process data without writing long for loops.
+The first one is map(). 
+Think of map() as a machine that takes an array, performs an action on every item, and gives you back a new array with the results. It doesn't change the original list; it creates a transformed copy.
+
+let prices = [10, 20, 30];
+// The map method "maps" each number (n) to (n * 2)
+let doubledPrices = prices.map(n => n * 2);
+console.log(doubledPrices); // [20, 40, 60]
+
+
+Filter: The "Gatekeeper"
+Now that we can change values with map(), let's look at another essential array method: filter().
+While map() changes every item, filter() creates a new array that only includes items that pass a specific "test" (a condition that is true). It acts like a sieve or a gatekeeper. 
+
+let scores = [30, 85, 45, 92, 60];
+// We tell filter: "Only keep 's' if s is greater than or equal to 50"
+let passingScores = scores.filter(s => s >= 50);
+console.log(passingScores); // [85, 92, 60]
+
+
+Reduce
+In your CodeWithHarry screenshot, there was one more big name: reduce().
+While map and filter give you a new array, reduce is used when you want to take an entire array and squash it down into one single value (like a total sum).
+It uses two main parts:
+Accumulator (acc): This is like a "running total" bucket.
+Current Value (curr): The item the loop is currently holding.
+
+let numbers = [1, 2, 3, 4];
+let sum = numbers.reduce((acc, curr) => acc + curr, 0); 
+// 0 is the starting value for our bucket

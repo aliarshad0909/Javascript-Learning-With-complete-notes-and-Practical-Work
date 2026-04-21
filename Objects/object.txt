@@ -1,0 +1,32 @@
+We are now at the final stop of our initial roadmap!
+We've used Arrays for lists (like ["Ali", "Sara"]). 
+But what if you want to store a lot of different information about one specific thing?
+For example, a user named Ali isn't just a name. He has an age, an email, and a login status. Instead of 3 separate variables, we use an Object.
+Objects use curly braces {} and store data in key-value pairs.
+
+Example of an Object
+JavaScript
+let user = {
+    name: "Ali",
+    age: 25,
+    isLoggedIn: true
+};
+To get a specific piece of info, you use 
+"dot notation": user.name would give you "Ali".
+
+Questions:
+Imagine you are making a profile for a Book .
+Create an object named myBook.
+Give it three properties: title, author, and pageCount.
+How would you write that object in your index.js.
+
+Answers:
+let myBook = { 
+    title: "The Deep Sky",
+    author: "Ali Arshad",
+    isPublished: true 
+};
+
+console.log(`The book name is ${myBook.title}, 
+the author is ${myBook.author}, and 
+the publication status is ${myBook.isPublished}.`);

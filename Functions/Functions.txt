@@ -1,0 +1,39 @@
+Functions (The "Recipe") 
+We are moving right along the roadmap! We've done variables, logic, and loops. Now, let's talk about Functions.
+Up until now, we've been writing code that runs immediately from top to bottom. But what if you have a set of instructions you want to save and use later?
+A Function is like a saved recipe. You define it once, and then you can "call" it whenever you need it.
+
+How to build a function
+Declare it: Use the function keyword and give it a name.
+
+The Inputs (Parameters): Inside the (), you list the "ingredients" it needs.
+
+The Work: Inside the {} is the code that actually runs.
+
+JavaScript
+function sayHello(name) {
+    console.log(`Hello ${name}!`);
+}
+
+How to "call" a function
+To use the recipe, you just type its name with parentheses:
+sayHello("Ali");
+
+Questions:
+Now that you know how to return a value from a function, let's try something slightly more advanced.
+Could you create a new function called isEven?
+It should take one number as an input.
+It should return true if the number is even and false if it is odd.
+Hint: To check if a number is even, we see if the remainder is 0 when divided by 2. In JavaScript, we use the Modulo operator % for remainders (e.g., 10 % 2 === 0).
+How would you start that function? ✍️
+
+Answers:
+function isEven(num) {
+    return num % 2 === 0;
+}
+function isOdd(num) {
+    return num % 2 !== 0;
+}
+console.log("Is 4 even? " + isEven(4));
+console.log("Is 4 odd? " + isOdd(4));
+

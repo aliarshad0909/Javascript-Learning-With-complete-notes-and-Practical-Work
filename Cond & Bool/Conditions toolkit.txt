@@ -1,0 +1,54 @@
+To make decisions, JavaScript uses Comparison Operators. 
+These are symbols that compare two values and result in either true or false.
+The Comparison Toolkit 
+Symbol,Meaning,Example,Result
+>          Greater than                         10 > 5                      true
+<          Less than                            3 < 1                       false
+>=         Greater than or equal to             60 >= 60                    true
+<=         Less than or equal to                5 <= 10                     true
+===        Strict equality (Exactly equal)      5 === 5                     true
+!==        Not equal                           5 !== 10                     true
+
+Real-world scenario:
+Questions:
+If you were writing a program for a Smart Thermostat 🌡️, 
+and you wanted to check if it's "Hot," "Cold," or "Just Right," 
+how many conditions (if/else if) do you think you would need to set up?
+(conditions.png shows how it work in a visualized way)
+
+Answer :
+let temp = 30;
+if (temp > 25) {
+    console.log("It's a hot day");
+}
+else if (temp > 15) {
+    console.log("It's a pleasant day");
+}
+else {
+    console.log("It's a cold day");
+}
+
+The "Logical Operators" 
+Before we move on to the next part of the roadmap, 
+there's one more tool that makes if statements much more powerful. 
+Sometimes you need to check two things at once.
+(Boolean.png shows how it work in a visualized way)
+Symbol               Name                What it does                            Example
+&&                   AND                 True only if both sides are true.      (temp > 15 && temp < 25)
+`                                        `                                      OR
+!                    NOTFlips the value  (True becomes False).                  !isLoggedIn
+
+Questions :
+Imagine you're building a website that only 
+lets people in if they are over 18 AND they have paid for a ticket.
+In your index.js, how would you write the if condition using the && (AND) operator 
+to check both age >= 18 and hasTicket === true? 🎟️
+
+Answer : let age = 20;
+let ticket = true;
+if (age >= 18 && ticket) {
+    console.log("You can enter the website");
+}
+else {
+    console.log("You cannot enter the website");
+}

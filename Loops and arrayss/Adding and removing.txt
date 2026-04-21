@@ -1,0 +1,11 @@
+we use specific "methods" (built-in functions) to handle this:
+
+push(): Adds an item to the end of the array. 
+pop(): Removes the last item from the array. 
+unshift(): Adds an item to the beginning of the array.
+shift(): Removes the first item from the array.
+
+let groceryList = ["Milk", "Eggs"];
+// Adding an item to the end
+groceryList.push("Bread");
+console.log(groceryList);
