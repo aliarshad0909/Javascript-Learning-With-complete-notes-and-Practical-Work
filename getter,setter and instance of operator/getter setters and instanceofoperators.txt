@@ -1,0 +1,149 @@
+1. Getters (get)
+Definition
+
+A getter is a method that lets you access a property like a normal variable, but internally it runs logic.
+
+Example
+class Animal {
+    constructor(name){
+        this._name = name;
+    }
+
+    get name(){
+        return this._name;
+    }
+}
+
+let a = new Animal("jack");
+
+console.log(a.name); // "jack"
+What’s happening
+a.name
+
+Internally calls:
+
+a.get name()
+Use Cases
+Hide internal data (_name)
+Format data before returning
+Compute values dynamically
+2. Setters (set)
+Definition
+
+A setter is a method that runs when you assign a value to a property.
+
+Example
+class Animal {
+    constructor(name){
+        this._name = name;
+    }
+
+    set name(newName){
+        this._name = newName;
+    }
+}
+
+let a = new Animal("jack");
+
+a.name = "max"; // setter runs
+What’s happening
+a.name = "max"
+
+internally:
+
+a.set name("max")
+Use Cases
+Validate input
+Transform data
+Trigger side effects
+Example with Validation
+set name(newName){
+    if(newName.length < 3){
+        console.log("Too short");
+        return;
+    }
+    this._name = newName;
+}
+🔹 3. Getter + Setter Together
+class Animal {
+    constructor(name){
+        this._name = name;
+    }
+
+    get name(){
+        return this._name;
+    }
+
+    set name(value){
+        this._name = value;
+    }
+}
+
+let a = new Animal("jack");
+
+console.log(a.name); // getter
+a.name = "leo";      // setter
+Key Concept
+Action	What happens
+a.name	getter runs
+a.name = "leo"	setter runs
+4. instanceof Operator
+Definition
+
+Checks whether an object is an instance of a class (or constructor).
+
+Example
+class Animal {}
+
+let a = new Animal();
+
+console.log(a instanceof Animal); // true
+More Examples
+console.log(a instanceof Object); // true
+console.log([] instanceof Array); // true
+console.log([] instanceof Object); // true
+ False Case
+class Dog {}
+
+console.log(a instanceof Dog); // false
+How it works
+
+It checks the prototype chain:
+
+“Does this object come from this class?”
+
+ Combined Example (All Together)
+class Animal {
+    constructor(name){
+        this._name = name;
+    }
+
+    get name(){
+        return this._name;
+    }
+
+    set name(value){
+        if(!value) throw new Error("Invalid name");
+        this._name = value;
+    }
+}
+
+let a = new Animal("jack");
+
+console.log(a instanceof Animal); // true
+
+console.log(a.name); // getter
+
+a.name = "max";      // setter
+
+console.log(a.name);
+ Final Key Takeaways
+Getters
+Access like property
+Execute logic on read
+Setters
+Execute logic on write
+Used for validation/control
+instanceof
+Checks object type
+Works via prototype chain

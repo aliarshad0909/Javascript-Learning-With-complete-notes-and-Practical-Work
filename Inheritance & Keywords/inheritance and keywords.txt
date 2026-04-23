@@ -1,0 +1,119 @@
+1) Inheritance — concept
+
+Inheritance allows one class to reuse properties and methods of another class.
+
+Parent class → base / superclass
+Child class → derived / subclass
+Why it exists
+Avoid code duplication
+Model real-world relationships
+Enable extensibility
+Basic idea
+
+If you already have a general class:
+
+class Person {
+  constructor(name) {
+    this.name = name;
+  }
+
+  greet() {
+    console.log("Hello " + this.name);
+  }
+}
+
+You can create a more specific class:
+
+class Student extends Person {
+  constructor(name, grade) {
+    super(name);
+    this.grade = grade;
+  }
+}
+What happens here?
+Student inherits everything from Person
+So Student automatically gets:
+name
+greet() method
+Object example
+let s1 = new Student("Ali", "A");
+s1.greet();  // Hello Ali
+
+Even though greet() is not written inside Student, it works — because of inheritance.
+
+2) Key Keywords in Inheritance
+
+Let’s go through the important ones you’ll see in most languages (especially Java, JavaScript, C++).
+
+1) extends — defines inheritance
+
+Used to connect child class to parent class.
+
+class Student extends Person
+
+Meaning:
+
+“Student is a type of Person”
+
+2) super — calls parent class
+
+Used inside child class to access the parent.
+
+a) Call parent constructor
+super(name);
+
+This runs the Person constructor.
+
+b) Call parent methods
+super.greet();
+3) this — current object
+
+You already saw this:
+
+this.name = name;
+
+Still means:
+
+“assign to this object”
+
+4) constructor — initializer
+
+Runs when object is created.
+
+In inheritance:
+
+Child constructor must call super() first (in many languages like JavaScript/Java)
+5) Method overriding
+
+Child class can replace parent behavior.
+
+Example:
+class Student extends Person {
+  greet() {
+    console.log("Hi, I am a student: " + this.name);
+  }
+}
+
+Now:
+
+let s1 = new Student("Ali", "A");
+s1.greet();
+
+Output:
+
+Hi, I am a student: Ali
+
+This is called overriding.
+
+3) Real-world analogy
+Person → general concept
+Student → specific type of person
+
+All students are persons, but not all persons are students.
+
+4) Summary (concise)
+Inheritance → reuse code from another class
+extends → creates inheritance
+super → accesses parent class
+this → current object
+Overriding → child replaces parent method

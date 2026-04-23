@@ -29,3 +29,4 @@ else {
     console.log("Booking has been cancelled for " + a);
 }
 alert("booking has been processed for " + a);
+}

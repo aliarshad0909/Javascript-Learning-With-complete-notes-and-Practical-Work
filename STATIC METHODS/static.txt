@@ -1,0 +1,20 @@
+A static method in JavaScript is a method defined using the static keyword that belongs to the class itself rather than to any specific instance of the class. 
+MDN Web Docs
+
+Core Characteristics
+Access: Static methods are called directly on the class (e.g., MyClass.myMethod()) 
+and cannot be accessed through instantiated objects.
+The this Keyword: Inside a static method, this refers to the class constructor itself, 
+not an instance of the class.
+Memory Efficiency: Memory for static methods is allocated only once on the class definition,
+ regardless of how many objects are created.
+Inheritance: Static methods are inherited by subclasses. A child class can call a static
+ method defined in its parent class. 
+
+Common Use Cases
+Utility Functions: Methods that perform operations without needing data from a specific instance, 
+such as Math.max() or Array.isArray().
+Factory Methods: Methods used to create and return new instances of a class in a specific way
+ (e.g., Promise.resolve()).
+Shared State: Managing data that should be consistent across all instances, such as a counter 
+for how many objects have been created. 
