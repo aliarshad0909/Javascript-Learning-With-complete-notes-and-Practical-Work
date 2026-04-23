@@ -1,0 +1,28 @@
+Now that we know how to handle time-consuming tasks, 
+let's look at a real-world example: The Fetch API. 
+This is the modern way to get data from a server 
+(like a weather update or a list of tasks) right into your JavaScript.
+
+The fetch() method returns a Promise.
+async function getTasks() {
+  // Step 1: Wait for the connection
+  let response = await fetch("https://api.example.com/tasks");
+  
+  // Step 2: Wait for the data to be converted to a JavaScript object
+  let data = await response.json();
+  
+  console.log(data);
+}
+
+how to send a POST request. To do this, we pass a 
+second argument (an object) into the fetch() function
+to tell it more about what we are doing.
+
+If you wanted to tell the server "I am sending you some JSON data," which property inside 
+that second argument object would you use to describe the type of content being sent? 
+headers: {
+  "Content-Type": "application/json"
+}
+method: Set to "POST".
+headers: To define the content type.
+body: The actual data we are sending (usually turned into a string using JSON.stringify()).

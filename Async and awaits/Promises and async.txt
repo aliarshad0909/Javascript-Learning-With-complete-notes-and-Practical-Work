@@ -1,0 +1,43 @@
+As you'll see in the next videos, using too many callbacks can lead to 
+something programmers call "Callback Hell"—where 
+your code starts to look like a giant pyramid because you're nesting functions inside functions.
+To solve this, JavaScript introduced Promises. Think of a Promise like a real-world promise:
+
+Pending: The task is still happening (the "downloading" state).
+
+Resolved: The task finished successfully! 
+
+Rejected: Something went wrong (like a lost internet connection). 
+
+.then() and .catch()
+To handle these final states, we use two special methods that "wait" for the Promise to settle:
+
+.then(): This block runs only if the Promise is Resolved. It receives the result/data.
+
+.catch(): This block runs only if the Promise is Rejected. It receives the error so you can handle 
+it gracefully (like showing a "Try Again" message).
+
+let p = fetchTasks(); // This returns a Promise
+
+p.then((data) => {
+    console.log("Tasks loaded!");
+});
+
+p.catch((err) => {
+    console.log("Something went wrong...");
+});
+
+
+async and await.
+
+async: You put this keyword before a function to tell JavaScript, 
+"This function will handle asynchronous tasks."
+
+await: You use this inside an async function. 
+It literally tells JavaScript to pause and wait for the promise to finish
+before moving to the next line. 
+ 
+ async function getTasks() {
+  let response = await fetchTasks(); // Pause here until it's done
+  console.log("Tasks loaded!");
+}

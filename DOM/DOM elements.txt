@@ -1,0 +1,77 @@
+parent.firstElementChild: Grabs the very first tag inside.
+
+parent.lastElementChild: Grabs the very last tag inside.
+
+parent.children[1]: Grabs the specific middle tag.
+
+nextElementSibling
+
+previousElementSibling
+
+querySelector(".className"): Finds the first element that matches the CSS selector. 
+
+querySelectorAll(".className"): Finds all elements 
+that match and puts them in a "NodeList" (which we can loop through). 
+
+matches(selector): Returns true if the element matches a specific CSS selector.
+
+closest(selector): Looks up the DOM tree to find the nearest ancestor (parent, grandparent, etc.) that matches a selector.
+
+contains(element): Checks if a parent element has a specific child inside it.
+
+hasAttribute(name): Checks if it exists (returns true/false).
+
+getAttribute(name): Gets the value (e.g., the actual URL in an src).
+
+setAttribute(name, value): Changes or adds a new attribute.
+
+removeAttribute(name): Deletes it entirely.
+
+node.append(element): Adds at the end of the node (inside). 
+
+node.prepend(element): Adds at the beginning of the node (inside). 
+
+node.before(element): Adds before the node (outside). 
+
+node.after(element): Adds after the node (outside). 
+
+While append and prepend are great for moving element objects, Video #44 introduces a "pro" method called insertAdjacentHTML. This allows you to insert a raw string of HTML code into a specific position.
+
+It takes two arguments:
+
+The position (a string):
+
+"beforebegin": Before the element itself.
+
+"afterbegin": Just inside the element, before its first child.
+
+"beforeend": Just inside the element, after its last child.
+
+"afterend": After the element itself.
+
+The HTML string: e.g., "<li>New Task</li>"
+
+classList object, which is like a specialized "toolbox" for classes:
+
+classList.add("className"): Adds a class. 
+
+classList.remove("className"): Removes a class. 
+
+classList.toggle("className"): If the class is there, remove it; if not, add it. (Great for "Dark Mode" buttons!) 🌓
+
+classList.contains("className"): Checks if the class is applied. 
+
+setTimeout(function, delay): Runs the function once after the delay (in milliseconds). 
+setTimeout(() => {
+  alert("The message is now disappearing!");
+}, 3000); // 3000 milliseconds = 3 seconds
+
+setInterval(function, delay): Runs the function repeatedly, waiting the delay time 
+between each execution. 
+let intervalId = setInterval(() => {
+  console.log("This happens every 2 seconds");
+}, 2000);
+
+// To stop it:
+clearInterval(intervalId);
+

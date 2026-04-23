@@ -1,0 +1,13 @@
+console.error(): Highlights text in red to show something went wrong.
+console.warn(): Highlights text in yellow for a warning.
+console.table(): Turns an array of objects into a neat, readable table.
+
+
+
+
+console.time() and console.timeEnd(): Measures how long a piece of code takes to run. 
+console.time("loopTimer");
+for (let i = 0; i < 1000000; i++) {
+    // Doing a lot of work...
+}
+console.timeEnd("loopTimer");

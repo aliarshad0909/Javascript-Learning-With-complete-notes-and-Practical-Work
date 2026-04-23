@@ -1,0 +1,14 @@
+Object-Oriented Programming (OOP) in JavaScript is a paradigm that organizes code into objects—bundles of data (properties) and behavior (methods). While traditional languages like Java or C++ are class-based, JavaScript is fundamentally prototype-based, meaning objects inherit properties directly from other objects. 
+
+Core Pillars of JavaScript OOP
+JavaScript implements the four traditional pillars of OOP using a mix of class syntax and its underlying prototype system. 
+
+Encapsulation: Bundling data and the methods that operate on it into a single unit. You can restrict direct access to certain data using private fields (prefixed with #) to ensure data integrity.
+Abstraction: Hiding complex implementation details and showing only essential features. This is often achieved through high-level methods that perform complex internal logic without the user needing to know how they work.
+Inheritance: The process where a "child" class derives properties and methods from a "parent" class. In JavaScript, this is primarily done using the extends keyword in ES6 classes.
+Polymorphism: The ability for different objects to respond to the same method call in their own specific way. This is typically implemented through method overriding, where a subclass provides its own version of a method already defined in its parent. 
+
+ The Prototype Object: Every object has an internal link, denoted as [[Prototype]], which refers to another object called its prototype.
+The Prototype Chain: When you access a property that doesn't exist on an object, JavaScript automatically searches its prototype, then the prototype's prototype, and so on. The chain ends at Object.prototype, whose own prototype is null.
+Shadowing: If an object and its prototype have a property with the same name, the object's own property is used first, "shadowing" the inherited one.
+The this Keyword: When an inherited method is called, this refers to the original inheriting object, not the prototype where the method is defined. 

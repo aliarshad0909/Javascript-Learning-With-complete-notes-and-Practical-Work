@@ -1,0 +1,4 @@
+location: Deals with the URL (redirecting, reloading, or seeing the current address). 
+navigator: Gives info about the browser itself (like the language, battery status, or geolocation). 
+screen: Tells you about the user's physical screen size and resolution. 
+history: Lets you go "back" or "forward" in the user's browsing session.

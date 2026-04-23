@@ -1,0 +1,6 @@
+Alert , prompt and confirm
+Use prompt() to ask the user for a secret password.
+Use an if statement to check if the password is "JavaScript123".
+If it's correct, use alert() to say "Access Granted".
+If it's wrong, use confirm() to ask "Wrong password. Would you like to try again?"
+

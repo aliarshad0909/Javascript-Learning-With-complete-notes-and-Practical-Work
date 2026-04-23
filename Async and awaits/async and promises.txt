@@ -1,0 +1,23 @@
+Promises & Async/Await 
+
+This is where JavaScript gets "superpowers." 
+Up until now, our code has been synchronous (one line at a time). Now, we'll learn to handle tasks that take time—like fetching data from a server or waiting for a file to load—without freezing the whole browser.
+
+The first step in this journey is understanding Callbacks.
+
+The Callback Concept: 
+A callback is simply a function passed into another function as an argument, to be executed later.
+function loadData(callback) {
+  // Pretend we are loading data...
+  callback();
+}
+
+As you'll see in the next videos, using too many callbacks can lead to something programmers call "Callback Hell"—where your code starts to look like a giant pyramid because you're nesting functions inside functions.
+
+To solve this, JavaScript introduced Promises. Think of a Promise like a real-world promise:
+
+Pending: The task is still happening (the "downloading" state). 
+
+Resolved: The task finished successfully! 
+
+Rejected: Something went wrong (like a lost internet connection). 
