@@ -1,0 +1,31 @@
+An IIFE (Immediately Invoked Function Expression) is a JavaScript 
+design pattern where a function is executed as soon as it is defined. 
+It is also known as a self-executing anonymous function. 
+
+Syntax
+An IIFE consists of two main parts:
+Grouping Operator (): Wraps an anonymous function, turning it into a function expression instead of a declaration.
+Invoking Parentheses (): Placed at the end to call the function immediately. 
+
+javascript
+// Standard Anonymous IIFE
+(function () {
+    console.log("I run immediately!");
+})();
+
+// Arrow Function IIFE
+(() => {
+    console.log("Arrow function IIFE!");
+})();
+Key Features
+Privacy & Scoping: Variables declared inside an IIFE are local to that function and cannot be accessed from the outside.
+Global Namespace Protection: Prevents "polluting" the global scope by encapsulating variables, which avoids naming conflicts with other scripts.
+Single Execution: The function executes exactly once and disappears from memory after it finishes (unless a closure is returned). 
+
+Common Use Casfes
+Top-Level await: Creating an async context to use await in environments that do not support top-level await.
+Private State (Module Pattern): Using closures to create private variables that only specific methods can access.
+Avoiding Loop Capture Issues: Historically used to capture the value of a loop index (like i) before ES6 let existed.
+Library Encapsulation: Many third-party libraries (like jQuery) wrap their entire source code in an IIFE to avoid global conflicts. 
+
+Modern Alternatives

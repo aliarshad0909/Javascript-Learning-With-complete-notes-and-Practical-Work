@@ -1,0 +1,35 @@
+Hoisting is a JavaScript mechanism where the interpreter
+appears to move declarations of variables, functions, classes, or imports
+to the top of their containing scope before code execution. 
+
+
+While declarations are hoisted, initializations (assignments) are not. 
+This means the JavaScript engine allocates memory for these entities during a 
+"creation phase" before actually executing the code line-by-line. 
+
+
+Types of Hoisting Behavior
+The way hoisting manifests depends on how the identifier is declared: 
+Function Declarations: These are fully hoisted. You can call a function declaration before it appears in your code.
+javascript
+
+greet(); // "Hello!"
+function greet() { console.log("Hello!"); }
+var Declarations: These are hoisted and initialized with a value of undefined.
+javascript
+console.log(x); // undefined
+var x = 5;
+
+let and const Declarations: These are hoisted but not initialized. They enter a Temporal Dead Zone (TDZ) from the start of the block until the declaration line is reached. Accessing them before declaration results in a ReferenceError.
+Function Expressions and Arrow Functions: Only the variable declaration is hoisted (following var or let/const rules); the actual function assignment happens only at execution time.
+Classes: Like let and const, class declarations are hoisted but uninitialized, meaning you cannot instantiate a class before its declaration without triggering a ReferenceError.
+Imports: These are fully hoisted to the top of the module, allowing side effects to occur before the rest of the code runs. 
+
+
+Comparison Table
+Declaration Type 	Hoisted?	Initial Value	Result if accessed before declaration
+function	Yes	Actual function	Works as expected
+var	Yes	undefined	Returns undefined
+let	Yes	Uninitialized	ReferenceError (TDZ)
+const	Yes	Uninitialized	ReferenceError (TDZ)
+class	Yes	Uninitialized	ReferenceError (TDZ)

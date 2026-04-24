@@ -1,0 +1,34 @@
+In JavaScript, scope determines where variables are accessible in your code. Understanding scope is essential for preventing variable name conflicts and managing memory efficiently. 
+
+1. Global Scope
+Variables declared outside any function or curly braces {} are in the global scope. 
+
+Accessibility: Accessible from anywhere in your program, including inside functions and blocks.
+Lifetime: They exist as long as the application is running.
+Best Practice: Minimize global variables to avoid "polluting" the global namespace, which can lead to hard-to-trace bugs and naming collisions. 
+
+
+2. Local Scope (Function Scope)
+Variables declared inside a function are in the local scope of that specific function. 
+
+
+
+Accessibility: Only accessible within the function where they are defined. Code outside the function cannot see them.
+Keywords: Variables declared with var, let, or const inside a function are all local to that function.
+Benefit: Allows you to use the same variable names in different functions without conflict. 
+
+
+3. Block Scope
+Introduced in ES6, block scope refers to variables declared inside a block—any code enclosed in curly braces {} such as if statements or for loops. 
+
+
+Accessibility: Only accessible within the specific {} block.
+Strict Keywords: Only let and const respect block scope. Variables declared with var do not have block scope and will "leak" out to the nearest function or global scope.
+Usage: Ideal for temporary variables used in loops or conditional logic. 
+
+
+Comparison Summary
+Scope Type 	Defined By	Access Range	Respects var?
+Global	Outside functions/blocks	Everywhere	Yes
+Local (Function)	Inside a function	Only inside that function	Yes
+Block	Inside { }	Only inside that block	No (var escapes)
